@@ -2,8 +2,62 @@
   min-height: 100vh;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Roboto:wght@500&display=swap');
+
+body {
+  background-color: #1b3300;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  font-family: 'EB Garamond', serif;
+  transition: all 0.5s;
+}
+
+main{
+
+}
+
 .recipes-container{
   display:flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  display: none;
+}
+
+.search-form {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button{
+  border: none;
+  background: green;
+  padding: 10px 20px;
+  height: 5vh;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.5s;
+}
+
+button:hover{
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.search-bar{
+  width:40%;
+  border:none;
+  padding: 15px;
+  height: 1.7vh;
+}
+
+h2{
+  width:auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: white;
 }

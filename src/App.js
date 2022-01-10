@@ -32,16 +32,22 @@ const App = () => {
     setSearch('');
   }
 
+  function showRecipes() {
+    var x = document.getElementById("recipe-container");
+    x.style.display = "block";
+  }
+
   return(
-    <div>
+    <main>
+      <h2>Got Food?</h2>
       <form onSubmit={getSearch} className="search-form">
         <input type="text" className="search-bar" value={search} onChange={updateSearch}/>
-        <button className="search-button" type="submit">
-          Search
+        <button className="search-button" type="submit" onClick={showRecipes}>
+          GET RECIPES
         </button>
       </form>
 
-      <div className="recipes-container">
+      <div className="recipes-container" id='recipe-container'>
         {recipies.map(recipe => (
           <Recipe
           key={recipe.recipe.label}
@@ -53,7 +59,7 @@ const App = () => {
       ))}
       </div>
       
-    </div>
+    </main>
   );
 }
 
