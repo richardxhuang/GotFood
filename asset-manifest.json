@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GotFood/static/css/main.4a73e4ac.css",
-    "main.js": "/GotFood/static/js/main.cd002674.js",
+    "main.js": "/GotFood/static/js/main.03f9719e.js",
     "static/js/787.e5523f78.chunk.js": "/GotFood/static/js/787.e5523f78.chunk.js",
     "index.html": "/GotFood/index.html",
     "main.4a73e4ac.css.map": "/GotFood/static/css/main.4a73e4ac.css.map",
-    "main.cd002674.js.map": "/GotFood/static/js/main.cd002674.js.map",
+    "main.03f9719e.js.map": "/GotFood/static/js/main.03f9719e.js.map",
     "787.e5523f78.chunk.js.map": "/GotFood/static/js/787.e5523f78.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a73e4ac.css",
-    "static/js/main.cd002674.js"
+    "static/js/main.03f9719e.js"
   ]
 }
