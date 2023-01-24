@@ -8,18 +8,20 @@ const App = () => {
 
   const [recipies, setRecipies] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chiken');
+  const [query, setQuery] = useState('');
 
   useEffect( () =>{
+    document.title = 'Macro Calculator';
+    const getRecipes = async () => {
+      const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${ID}&app_key=${KEY}`);
+      const data = await response.json();
+      setRecipies(data.hits);
+      console.log(data.hits);
+    }
     getRecipes();
   }, [query]);
 
-  const getRecipes = async () => {
-    const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${ID}&app_key=${KEY}`);
-    const data = await response.json();
-    setRecipies(data.hits);
-    console.log(data.hits);
-  }
+
 
   const updateSearch = e => {
     setSearch(e.target.value);
@@ -39,7 +41,7 @@ const App = () => {
 
   return(
     <main>
-      <h2>Got Food?</h2>
+      <h2>Search for recipes: </h2>
       <form onSubmit={getSearch} className="search-form">
         <input type="text" className="search-bar" value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit" onClick={showRecipes}>
@@ -50,7 +52,7 @@ const App = () => {
       <div className="recipes-container" id='recipe-container'>
         {recipies.map(recipe => (
           <Recipe
-          key={recipe.recipe.label}
+          key={recipe.recipe.label.url}
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
